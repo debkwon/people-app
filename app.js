@@ -9,6 +9,7 @@ nunjucks.configure('views', {noCache: true});
 
 const peopleRouter = require('./server/people');
 const tables = require('./models/people');
+const port = process.env.PORT || 1337;
 
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
@@ -18,8 +19,8 @@ app.use('/', peopleRouter);
 tables.db.sync()
 .then(() => {
   if (!module.parent){
-    app.listen(1337, () => {
-      console.log('Listening on 1337...')
+    app.listen(port, () => {
+      console.log('...listening on', port)
     })
   }
 })
