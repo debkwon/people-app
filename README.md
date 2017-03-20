@@ -30,11 +30,23 @@ You can make requests to:
 
 JSON responses:
 ---------
-There are a separate set of routes if you would like to view the JSON response in your browser instead of an HTML template. These routes can be found in the same '/server/people.js' file. '/json' is tacked on to the end of the routes written in the first half of the file.
+There are a separate set of routes if you would like to view the JSON response in instead of the HTML template in the browser. These routes can be found in the same '/server/people.js' file. '/json' is tacked on to the end of the routes written in the first half of the file. You can make CURL requests in the command line OR use Postman to send requests and view responses: https://www.getpostman.com/
 
 Routes
 ---------
-Backend routes are in the 'server' folder, in the people.js file
+Endpoints can be found in the server/people.js file. Here are the routes:  
+GET '/' will list all people  
+GET '/people' will display a form to add a person  
+GET '/people/:id' will display a form with a person's current info and button options to update or remove them  
+POST '/people' will submit the form and create a person (redirects to '/')  
+PUT '/people/:id' will update a person in the database (redirects to '/')  
+DELETE '/people/:id' will remove a person from the database (redirects to '/')  
+
+GET '/json' will send JSON response of all people  
+GET '/people/:id/json' will send JSON response of the specific person found by id  
+POST '/people/json' will send JSON response of all people  
+PUT '/people/:id/json' will update specific person by id  
+DELETE '/people/:id/json' will send a 204 status and remove a single matched person by id from the database  
 
 Templates
 ---------
