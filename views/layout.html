@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+  <title>{% block title %}People{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200|Lato:300|Roboto" rel="stylesheet">
+  <link rel='stylesheet' href='/style.css'>
+</head>
+<body>
+  <div>
+    <h1 onclick="location.href='/'">&nbspTTPeople</h1>
+    {% block content %}
+    {% endblock %}
+    {% block delete %}
+    {% endblock %}
+  </div>
+</body>
+</html>

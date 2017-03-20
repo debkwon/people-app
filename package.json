@@ -1,0 +1,31 @@
+{
+  "name": "people-app",
+  "version": "1.0.0",
+  "description": "Express client-server example for TTP",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon -e html,js,css ./app.js",
+    "test": "mocha --watch models/**.test.js server/**.test.js"
+  },
+  "author": "Deborah Kwon <deborah.m.kwon@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "chai": "^3.5.0",
+    "express": "^4.15.2",
+    "method-override": "^2.3.7",
+    "mocha": "^3.2.0",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0",
+    "nunjucks": "^3.0.0",
+    "pg": "^6.1.4",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.30.2",
+    "supertest": "^3.0.0",
+    "supertest-as-promised": "^4.0.2"
+  },
+  "engines": {
+    "node": "6.7.0"
+  }
+}

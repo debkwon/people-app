@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div>
+    <ul>
+      {%for p in people%}
+        <li><a href='/people/{{p.id}}'>{{p.name}}, {{p.favoriteCity}}</a></li>
+
+      {% endfor %}
+      <br />
+       <button onclick="location.href='/people'">Add a Person</button>
+    </ul>
+  </div>
+{% endblock %}
+

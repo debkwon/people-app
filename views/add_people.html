@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h2>Add a Person</h2>
+
+  <form method="POST" action="/people">
+    <div>
+      <label>Name</label>
+      <input name="name" type="text" />
+
+      <div>
+        <label>Favorite City</label>
+        <input name="favoriteCity" type="text" />
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+
+  </form>
+
+{% endblock %}

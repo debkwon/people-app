@@ -1,0 +1,39 @@
+body {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  background-color: #eee;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.2em;
+}
+
+button {
+  font-size: 1em;
+  border-radius: 5px;
+  background-color: black;
+  border-style: solid;
+  color: white;
+  margin: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1em;
+}
+
+a:hover {
+  color: #a84646;
+}
+
+input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: .8em;
+}
+
+h1 {
+  background-color: #fff;
+  width: 160px;
+}
