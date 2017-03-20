@@ -7,6 +7,10 @@
     "start": "nodemon -e html,js,css ./app.js",
     "test": "mocha --watch models/**.test.js server/**.test.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/debkwon/people-app"
+  },
   "author": "Deborah Kwon <deborah.m.kwon@gmail.com>",
   "license": "ISC",
   "dependencies": {
