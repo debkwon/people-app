@@ -9,13 +9,16 @@ api.use(bodyParser.json());
 //for PUT or DELETE requests, HTML form actions can take a param that will override the method..for example: <form action='update/1?_method=PUT'> will allow you to keep a PUT route
 api.use(methodOverride('_method'));
 
+let jsonRes = (res) => JSON.stringify(res,null,'\t')
+
 /*******ROUTES********/
 
 api.get('/', (req,res,next) => {
   People.findAll()
   .then(allPeople => {
     res.render('index', {
-      people: allPeople
+      people: allPeople,
+      json: jsonRes(allPeople)
     })
   })
   .catch(next)
@@ -29,7 +32,8 @@ api.get('/people/:id', (req,res,next) => {
   People.findById(req.params.id)
   .then(foundPerson => {
     res.render('edit_people', {
-      person: foundPerson
+      person: foundPerson,
+      json: jsonRes(foundPerson)
     })
   })
   .catch(next)
