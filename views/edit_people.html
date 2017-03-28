@@ -6,11 +6,11 @@
   <form method="POST" action="/people/{{person.id}}?_method=PUT" >
     <div>
       <label>Name</label>
-      <input name="name" type="text" value={{person.name}} />
+      <input name="name" type="text" value='{{person.name}}' />
 
       <div>
         <label>Favorite City</label>
-        <input name="favoriteCity" type="text" value={{person.favoriteCity}} />
+        <input name="favoriteCity" type="text" value='{{person.favoriteCity}}' />
       </div>
 
       <div>
